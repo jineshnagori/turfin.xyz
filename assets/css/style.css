@@ -1,6 +1,6 @@
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #000000;
+    --secondary-color: #010101;
     --tertiary-color: #0db001;
 }
 
@@ -56,7 +56,7 @@ h6 {
     }
 
     h4 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -144,11 +144,9 @@ textarea {
 /* hero */
 .hero {
     height: 60vh;
-    background: var(--tertiary-color);
+    background: url(../images/hero-img.png) no-repeat center;
+    background-size: cover;
     color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero-btn {
@@ -156,15 +154,33 @@ textarea {
 }
 
 .hero-btn a {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 10px 20px;
-    border-radius: 5px;
-    border: 2px solid var(--secondary-color);
+    border-radius: 57px;
+    border: 2px solid var(--primary-color);
 }
 
 .hero-btn a:hover {
     background: transparent;
     border: 2px solid var(--primary-color) !important;
     color: var(--primary-color) !important;
+}
+
+@media screen and (max-width: 991px) {
+    .hero {
+        height: 40vh;
+        padding-top: 50px;
+    }
+    .hero-btn {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
